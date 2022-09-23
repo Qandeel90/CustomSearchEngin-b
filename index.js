@@ -70,6 +70,7 @@ res.json(search(obj));
 
 app.use('/', router);
 //start server
-app.listen(3001, ()=>{
-    console.log("listeniing at port:3001")
-}) 
+const server = app.listen(process.env.PORT || 3000, () => {
+  const port = server.address().port;
+  console.log(`Express is working on port ${port}`);
+});
