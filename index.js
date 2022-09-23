@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var obj;
 
 // Read the file and send to the callback
-fs.readFile('../bigdata.json', handleFile)
+fs.readFile('./bigdata.json', handleFile)
 
 // Write the callback function
 function handleFile(err, data) {
